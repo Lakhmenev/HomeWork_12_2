@@ -51,7 +51,7 @@ def save_uploaded_picture(picture):
 
     try:
         picture.save(f'./uploads/images/{filename}')
-    except():
+    except FileNotFoundError:
         logging.info(f'Ошибка при сохранении файла {filename}')
     else:
         logging.info(f'Файл {filename} сохранён!')
